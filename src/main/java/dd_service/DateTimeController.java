@@ -1,5 +1,6 @@
 package dd_service;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
@@ -11,5 +12,11 @@ public class DateTimeController {
     @GetMapping("/api/time")
     public LocalTime time(){
         return t.getTime();
+    }
+
+    @GetMapping("/api/date")
+    public String date(@RequestParam String format){
+        MyDate m = new MyDate(format);
+        return m.getDate();
     }
 }

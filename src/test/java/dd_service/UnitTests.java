@@ -16,7 +16,34 @@ public class UnitTests {
             assertEquals(true, true);
         }
         else{
-            assertEquals(false, false);
+            assertEquals(true, false);
         }
     }
+
+    @Test
+    public void testMyDate_no_format(){
+        MyDate d = new MyDate();
+        if (d.getDate() != null){
+            assertEquals(true, true);
+        }
+        else{
+            assertEquals(true, false);
+        }
+    }
+
+    @Test
+    public void testMyDate_format1(){
+        MyDate d = new MyDate("yyyy-MM-dd");
+        assertEquals(d.getDate(), "2022-06-22");
+
+    }
+    @Test
+    public void testMyDate_format2(){
+        MyDate d = new MyDate("dd/MM/yyyy");
+        assertEquals(d.getDate(), "22/06/2022");
+
+    }
+
+
+
 }
