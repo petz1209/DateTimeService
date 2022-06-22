@@ -31,18 +31,19 @@ public class UnitTests {
         }
     }
 
-
     @Test
     public void testMyDate_format1(){
         MyDate d = new MyDate("yyyy-MM-dd");
-        assertEquals(d.getDate(), "2022-06-19");
+        assertEquals(d.getDate(), "2022-06-22");
 
     }
     @Test
     public void testMyDate_format2(){
         MyDate d = new MyDate("dd/MM/yyyy");
-        assertEquals(d.getDate(), "19/06/2022");
+        assertEquals(d.getDate(), "22/06/2022");
 
     }
+
+
 
 }
